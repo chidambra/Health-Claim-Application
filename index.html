@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Claim | Dashboard</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="Content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Content/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="Content/css/style.css">
+    <link rel="stylesheet" href="Content/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Content/css/ionicons.min.css">
+    <link rel="stylesheet" href="Content/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="Content/css/_all-skins.min.css">
+    <link rel="stylesheet" href="Content/css/daterangepicker.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <script src="Content/js/jquery.min.js"></script>
+    <script src="Content/js/jquery-ui.min.js"></script>
+    <script src="Content/js/bootstrap.min.js"></script>
+    <script src="Content/js/jquery.dataTables.min.js"></script>
+    <script src="Content/js/dataTables.bootstrap.min.js"></script>
+    <script src="Content/js/moment.min.js"></script>
+    <script src="Content/js/daterangepicker.js"></script>
+    <script src="Content/js/adminlte.min.js"></script>
+    <script>
+        $(function () {
+            $('#reservation').daterangepicker();
+            $('#example1').DataTable();
+       
+	   	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	}) })
+    </script>
+    </head>
+    <body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
+    <div class="wrapper">
+      <header class="main-header"> <a href="index.html" class="logo"> <span class="logo-mini">Claim</span> <span class="logo-lg">Claim Assistance</span> </a>
+        <nav class="navbar navbar-static-top"> <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button"> <span class="sr-only">Toggle navigation</span> </a>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li class="dropdown user user-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="glyphicon glyphicon-user"></i> <span class="hidden-xs">Amit Kumar</span> </a>
+                <ul class="dropdown-menu">
+                  <li class="user-footer">
+                    <div class="pull-right"> <a href="login.html"><i class="fa fa-sign-out"></i> Sign out</a> </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <aside class="main-sidebar">
+        <section class="sidebar">
+          <ul class="sidebar-menu" data-widget="tree">
+            <li class="active treeview"> <a href="index.html"> <i class="fa fa-home"></i> <span>Home</span> </a> </li>
+            <li class="treeview"> <a href="#"> <i class="fa fa-files-o"></i> <span>Sample 1</span> </a> </li>
+            <li> <a href="#"> <i class="fa fa-th"></i> <span>Sample 2</span> </a> </li>
+          </ul>
+        </section>
+      </aside>
+      <div class="content-wrapper">
+        <section class="content dashboard_table">
+          <div class="row">
+          <div class="col-lg-3 col-xs-6 small_block">
+              <div class="small-box bg-red">
+                <div class="inner">
+                  <h3>3</h3>
+                  <p>New</p>
+                </div>
+                <div class="icon"> <i class="ion ion-android-document"></i> </div>
+                <a href="dashboard_new.html" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> </div>
+            </div>
+            <div class="col-lg-3 col-xs-6 small_block">
+              <div class="small-box bg-aqua">
+                <div class="inner">
+                  <h3>23</h3>
+                  <p>Document Pending</p>
+                </div>
+                <div class="icon"> <i class="ion ion-document-text"></i> </div>
+                <a href="index.html" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> </div>
+            </div>
+            <div class="col-lg-3 col-xs-6 small_block">
+              <div class="small-box bg-green">
+                <div class="inner">
+                  <h3>15</h3>
+                  <p>Pending with Insurer</p>
+                </div>
+                <div class="icon"> <i class="fa fa-spinner" style="font-size:80px;"></i> </div>
+                <a href="index.html" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> </div>
+            </div>
+            <div class="col-lg-3 col-xs-6 small_block">
+              <div class="small-box bg-yellow">
+                <div class="inner">
+                  <h3>17</h3>
+                  <p>Partially Approved</p>
+                </div>
+                <div class="icon"> <i class="ion ion-android-cloud-done"></i> </div>
+                <a href="index.html" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> </div>
+            </div>
+            
+            <div class="col-lg-3 col-xs-6 small_block">
+              <div class="small-box bg-teal">
+                <div class="inner">
+                  <h3>5</h3>
+                  <p>Status</p>
+                </div>
+                <div class="icon"> <i class="ion ion-information"></i> </div>
+                <a href="index.html" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="box box-primary">
+                <form role="form">
+                  <div class="box-body">
+                    <div class="form-group filter_block">
+                      <input type="mobile" class="form-control" id="exampleInputMobile1" placeholder="Enter Mobile No">
+                    </div>
+                    <div class="form-group filter_block">
+                      <input type="text" class="form-control" id="exampleInputMobile1" placeholder="Enter Policy No">
+                    </div>
+                    <div class="form-group filter_block">
+                      <input type="text" class="form-control" id="exampleInputMobile1" placeholder="Enter Registration No">
+                    </div>
+                    <div class="form-group filter_block">
+                      <div class="input-group">
+                        <div class="input-group-addon"> <i class="fa fa-calendar"></i> </div>
+                        <input type="text" class="form-control pull-right" id="reservation" placeholder="Intimation Date">
+                      </div>
+                    </div>
+                    <div class="form-group filter_block submit_button">
+                      <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="box">
+                <div class="box-header table_header table_hd">
+                  <h3 class="box-title">Pickup Scheduled</h3>
+                </div>
+                <div class="box-body">
+                  <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>Intimation Date</th>
+                        <th>ClaimId</th>
+                        <th>Mobile No.</th>
+                        <th>Policy Number</th>
+                        <th>Status - Substatus</th>
+                        <th>Hospital</th>
+                        <th>Insurer</th>
+                        <th>Agent</th>
+                        <th>LastCommunication</th>
+                        <th>Callback Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>15/7/2017</td>
+                        <td><a href="claim_status.html">763455</a></td>
+                        <td><a href="customer_view.html">9867453628</a></td>
+                        <td>P0L1cYNu334</td>
+                        <td><span class="label label-success">Approved</span></td>
+                        <td>Bacon ipsum</td>
+                        <td>Bacon ipsum</td>
+                        <td>Bacon ipsum</td>
+                        <td><a href="javascript:void(0);" data-toggle="modal" data-target="#modal-default">from:Cust</a></td>
+                        <td>Bacon ipsum</td>
+                      </tr>
+                      <tr>
+                        <td>15/7/2017</td>
+                        <td><a href="claim_status.html">763455</a></td>
+                        <td><a href="customer_view.html">9867453628</a></td>
+                        <td>P0L1cYNu334</td>
+                        <td><span class="label label-success">Approved</span></td>
+                        <td>Bacon ipsum</td>
+                        <td>Bacon ipsum</td>
+                        <td>Bacon ipsum</td>
+                        <td><a href="javascript:void(0);" data-toggle="modal" data-target="#modal-default">from:Cust</a></td>
+                        <td>Bacon ipsum</td>
+                      </tr>
+                      <tr>
+                        <td>15/7/2017</td>
+                        <td><a href="claim_status.html">763455</a></td>
+                        <td><a href="customer_view.html">9867453628</a></td>
+                        <td>P0L1cYNu334</td>
+                        <td><span class="label label-success">Approved</span></td>
+                        <td>Bacon ipsum</td>
+                        <td>Bacon ipsum</td>
+                        <td>Bacon ipsum</td>
+                        <td><a href="javascript:void(0);" data-toggle="modal" data-target="#modal-default">from:Cust</a></td>
+                        <td>Bacon ipsum</td>
+                      </tr>
+                      <tr>
+                        <td>15/7/2017</td>
+                        <td><a href="claim_status.html">763455</a></td>
+                        <td><a href="customer_view.html">9867453628</a></td>
+                        <td>P0L1cYNu334</td>
+                        <td><span class="label label-success">Approved</span></td>
+                        <td>Bacon ipsum</td>
+                        <td>Bacon ipsum</td>
+                        <td>Bacon ipsum</td>
+                        <td><a href="javascript:void(0);" data-toggle="modal" data-target="#modal-default">from:Cust</a></td>
+                        <td>Bacon ipsum</td>
+                      </tr>
+                      <tr>
+                        <td>15/7/2017</td>
+                        <td><a href="claim_status.html">763455</a></td>
+                        <td><a href="customer_view.html">9867453628</a></td>
+                        <td>P0L1cYNu334</td>
+                        <td><span class="label label-success">Approved</span></td>
+                        <td>Bacon ipsum</td>
+                        <td>Bacon ipsum</td>
+                        <td>Bacon ipsum</td>
+                        <td><a href="javascript:void(0);" data-toggle="modal" data-target="#modal-default">from:Cust</a></td>
+                        <td>Bacon ipsum</td>
+                      </tr>
+                      <tr>
+                        <td>15/7/2017</td>
+                        <td><a href="claim_status.html">763455</a></td>
+                        <td><a href="customer_view.html">9867453628</a></td>
+                        <td>P0L1cYNu334</td>
+                        <td><span class="label label-success">Approved</span></td>
+                        <td>Bacon ipsum</td>
+                        <td>Bacon ipsum</td>
+                        <td>Bacon ipsum</td>
+                        <td><a href="javascript:void(0);" data-toggle="modal" data-target="#modal-default">from:Cust</a></td>
+                        <td>Bacon ipsum</td>
+                      </tr>
+                      <tr>
+                        <td>15/7/2017</td>
+                        <td><a href="claim_status.html">763455</a></td>
+                        <td><a href="customer_view.html">9867453628</a></td>
+                        <td>P0L1cYNu334</td>
+                        <td><span class="label label-success">Approved</span></td>
+                        <td>Bacon ipsum</td>
+                        <td>Bacon ipsum</td>
+                        <td>Bacon ipsum</td>
+                        <td><a href="javascript:void(0);" data-toggle="modal" data-target="#modal-default">from:Cust</a></td>
+                        <td>Bacon ipsum</td>
+                      </tr>
+                      <tr>
+                        <td>15/7/2017</td>
+                        <td><a href="claim_status.html">763455</a></td>
+                        <td><a href="customer_view.html">9867453628</a></td>
+                        <td>P0L1cYNu334</td>
+                        <td><span class="label label-success">Approved</span></td>
+                        <td>Bacon ipsum</td>
+                        <td>Bacon ipsum</td>
+                        <td>Bacon ipsum</td>
+                        <td><a href="javascript:void(0);" data-toggle="modal" data-target="#modal-default">from:Cust</a></td>
+                        <td>Bacon ipsum</td>
+                      </tr>
+                      
+                    
+                    </tbody>
+                  </table>
+                </div>
+                <div class="modal fade" id="modal-default">
+          <div class="modal-dialog modal_container">
+        <div class="modal-content ">
+              <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span></button>
+           
+          </div>
+              <div class="modal-body">
+            
+	<ul class="tabs">
+		<li class="tab-link current" data-tab="tab-1">Tab One</li>
+		<li class="tab-link" data-tab="tab-2">Tab Two</li>
+		<li class="tab-link" data-tab="tab-3">Tab Three</li>
+		<li class="tab-link" data-tab="tab-4">Tab Four</li>
+	</ul>
+
+	<div id="tab-1" class="tab-content current">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	</div>
+	<div id="tab-2" class="tab-content">
+		 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+	<div id="tab-3" class="tab-content">
+		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+	</div>
+	<div id="tab-4" class="tab-content">
+		Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	</div>
+          </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-info register_button" data-dismiss="modal" aria-label="Close">Attach</button>
+          </div>
+            </div>
+      </div>
+        </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="control-sidebar-bg"></div>
+    </div>
+</body>
+</html>
